@@ -108,13 +108,15 @@ export default {
         instructions: '',
         children: [{
           title: '1号',
-          name: '',
+          type: 'page',
+          name: 'ymc',
           ue_name: '原煤仓1号',
           isOpen: 'Y',
           children: []
         }, {
           title: '2号',
-          name: '',
+          type: 'page',
+          name: 'ymc',
           ue_name: '原煤仓2号',
           isOpen: 'Y',
           children: []
@@ -125,10 +127,10 @@ export default {
         span: '49',
         instructions: '',
         children: [{
-          title: '压滤车间',
+          title: '末煤车间',
           type: 'page',
           name: 'mmcj',
-          ue_name: '压滤车间',
+          ue_name: '末煤车间',
           isOpen: 'Y',
           children: []
         }]
@@ -139,7 +141,8 @@ export default {
         instructions: '',
         children: [{
           title: '块煤车间',
-          name: '',
+          type: 'page',
+          name: 'ycf',
           ue_name: '块煤车间',
           isOpen: 'Y',
           children: []
@@ -164,25 +167,29 @@ export default {
         instructions: '',
         children: [{
           title: '1',
-          name: '',
+          type: 'page',
+          name: 'nscj',
           ue_name: '浓缩车间1',
           isOpen: 'Y',
           children: []
         }, {
           title: '2',
-          name: '',
+          type: 'page',
+          name: 'nscj',
           ue_name: '浓缩车间2',
           isOpen: 'Y',
           children: []
         }, {
           title: '3',
-          name: '',
+          type: 'page',
+          name: 'nscj',
           ue_name: '浓缩车间3',
           isOpen: 'Y',
           children: []
         }, {
           title: '4',
-          name: '',
+          type: 'page',
+          name: 'nscj',
           ue_name: '浓缩车间4',
           isOpen: 'Y',
           children: []
@@ -194,7 +201,8 @@ export default {
         instructions: '',
         children: [{
           title: '干燥车间',
-          name: '',
+          type: 'page',
+          name: 'gzcj',
           ue_name: '干燥车间',
           isOpen: 'Y',
           children: []
@@ -206,7 +214,8 @@ export default {
         instructions: '',
         children: [{
           title: '矸石仓',
-          name: '',
+          type: 'page',
+          name: 'gsc',
           ue_name: '矸石仓',
           isOpen: 'Y',
           children: []
@@ -231,7 +240,8 @@ export default {
         instructions: '',
         children: [{
           title: '干煤泥棚',
-          name: '',
+          type: 'page',
+          name: 'gmnp',
           ue_name: '干煤泥棚',
           isOpen: 'Y',
           children: []
@@ -243,7 +253,8 @@ export default {
         instructions: '',
         children: [{
           title: '精煤干燥车间',
-          name: '',
+          type: 'page',
+          name: 'jmgzcj',
           ue_name: '精煤干燥车间',
           isOpen: 'Y',
           children: []
@@ -270,7 +281,8 @@ export default {
           children: []
         }, {
           title: '3号',
-          name: '',
+          type: 'page',
+          name: 'cpc',
           ue_name: '成品仓3',
           isOpen: 'Y',
           children: []
