@@ -46,7 +46,7 @@
           </div>
           <div class="line" />
           <div class="equipment-switch">
-            <div :class="`mode ${x_inx === activeSlide ? 'mode-active' : 'mode-noactive'}`"
+            <div :class="`mode ${x_inx === activeSlideShop ? 'mode-active' : 'mode-noactive'}`"
               v-for="(v, x_inx) in nowWorkshopChildren" :key="v.id" @click="handleProductionMode(v, x_inx)">
               {{ v.title }}
             </div>
@@ -65,10 +65,11 @@ export default {
   components: { HeadTop },
   data() {
     return {
-      mode: 'overview',
+      mode: 'cqzl',
       tabPosition: 'left',
       active: [0, 0],
       activeSlide: 1,
+      activeSlideShop: null,
       activeTipsSlide: 0,
       nowWorkshopChildren: [],
       nextClose: null,
@@ -81,7 +82,7 @@ export default {
         children: [{
           title: '工厂总览',
           type: 'page',
-          name: 'overview',
+          name: 'cqzl',
           ue_name: '工厂总览',
           isOpen: 'Y',
           children: []
@@ -94,7 +95,7 @@ export default {
         children: [{
           title: '工厂漫游',
           type: 'page',
-          name: 'roam',
+          name: 'cqmy',
           ue_name: '工厂漫游',
           isOpen: 'Y',
           children: []
@@ -126,7 +127,7 @@ export default {
         children: [{
           title: '压滤车间',
           type: 'page',
-          name: 'slackShop',
+          name: 'mmcj',
           ue_name: '压滤车间',
           isOpen: 'Y',
           children: []
@@ -151,7 +152,7 @@ export default {
         children: [{
           title: '压滤车间',
           type: 'page',
-          name: 'filterPressShop',
+          name: 'ylcj',
           ue_name: '压滤车间',
           isOpen: 'Y',
           children: []
@@ -218,7 +219,7 @@ export default {
         children: [{
           title: '超高压滤车间',
           type: 'page',
-          name: 'highFilterPressShop',
+          name: 'cgylcj',
           ue_name: '超高压滤车间',
           isOpen: 'Y',
           children: []
@@ -255,14 +256,14 @@ export default {
         children: [{
           title: '1号',
           type: 'page',
-          name: 'finishedProductsWarehouse',
+          name: 'cpc',
           ue_name: '成品仓1',
           isOpen: 'Y',
           children: []
         }, {
           title: '2号',
           type: 'page',
-          name: 'finishedProductsWarehouse',
+          name: 'cpc',
           ue_name: '成品仓2',
           isOpen: 'Y',
           instructions: [0, 36],
@@ -284,163 +285,163 @@ export default {
           children: [{
             title: '3205',
             type: 'tips',
-            name: 'slackShop',
+            name: 'mmcj',
             ue_name: '3205',
             isOpen: 'Y',
           }, {
             title: '3207',
             type: 'tips',
-            name: 'slackShop',
+            name: 'mmcj',
             ue_name: '3207',
             isOpen: 'Y',
           }, {
             title: '3209',
             type: 'tips',
-            name: 'slackShop',
+            name: 'mmcj',
             ue_name: '3209',
             isOpen: 'Y',
           }, {
             title: '3211',
             type: 'tips',
-            name: 'slackShop',
+            name: 'mmcj',
             ue_name: '3211',
             isOpen: 'Y',
           }, {
             title: '3213',
             type: 'tips',
-            name: 'slackShop',
+            name: 'mmcj',
             ue_name: '3213',
             isOpen: 'Y',
           },{
             title: '3215',
             type: 'tips',
-            name: 'slackShop',
+            name: 'mmcj',
             ue_name: '3215',
             isOpen: 'Y',
           }, {
             title: '3217',
             type: 'tips',
-            name: 'slackShop',
+            name: 'mmcj',
             ue_name: '3217',
             isOpen: 'Y',
           }, {
             title: '3220',
             type: 'tips',
-            name: 'slackShop',
+            name: 'mmcj',
             ue_name: '3220',
             isOpen: 'Y',
           }, {
             title: '3227',
             type: 'tips',
-            name: 'slackShop',
+            name: 'mmcj',
             ue_name: '3227',
             isOpen: 'Y',
           }, {
             title: '3229',
             type: 'tips',
-            name: 'slackShop',
+            name: 'mmcj',
             ue_name: '3229',
             isOpen: 'Y',
           }, {
             title: '3235',
             type: 'tips',
-            name: 'slackShop',
+            name: 'mmcj',
             ue_name: '3235',
             isOpen: 'Y',
           }, {
             title: '3237',
             type: 'tips',
-            name: 'slackShop',
+            name: 'mmcj',
             ue_name: '3237',
             isOpen: 'Y',
           }, {
             title: '3240',
             type: 'tips',
-            name: 'slackShop',
+            name: 'mmcj',
             ue_name: '3240',
             isOpen: 'Y',
           }, {
             title: '3242',
             type: 'tips',
-            name: 'slackShop',
+            name: 'mmcj',
             ue_name: '3242',
             isOpen: 'Y',
           }, {
             title: '3206',
             type: 'tips',
-            name: 'slackShop',
+            name: 'mmcj',
             ue_name: '3206',
             isOpen: 'Y',
           }, {
             title: '3208',
             type: 'tips',
-            name: 'slackShop',
+            name: 'mmcj',
             ue_name: '3208',
             isOpen: 'Y',
           }, {
             title: '3210',
             type: 'tips',
-            name: 'slackShop',
+            name: 'mmcj',
             ue_name: '3210',
             isOpen: 'Y',
           }, {
             title: '3212',
             type: 'tips',
-            name: 'slackShop',
+            name: 'mmcj',
             ue_name: '3212',
             isOpen: 'Y',
           }, {
             title: '3214',
             type: 'tips',
-            name: 'slackShop',
+            name: 'mmcj',
             ue_name: '3214',
             isOpen: 'Y',
           }, {
             title: '3216',
             type: 'tips',
-            name: 'slackShop',
+            name: 'mmcj',
             ue_name: '3216',
             isOpen: 'Y',
           }, {
             title: '3219',
             type: 'tips',
-            name: 'slackShop',
+            name: 'mmcj',
             ue_name: '3219',
             isOpen: 'Y',
           }, {
             title: '3225',
             type: 'tips',
-            name: 'slackShop',
+            name: 'mmcj',
             ue_name: '3225',
             isOpen: 'Y',
           }, {
             title: '3228',
             type: 'tips',
-            name: 'slackShop',
+            name: 'mmcj',
             ue_name: '3228',
             isOpen: 'Y',
           }, {
             title: '3230',
             type: 'tips',
-            name: 'slackShop',
+            name: 'mmcj',
             ue_name: '3230',
             isOpen: 'Y',
           }, {
             title: '3236',
             type: 'tips',
-            name: 'slackShop',
+            name: 'mmcj',
             ue_name: '3236',
             isOpen: 'Y',
           }, {
             title: '3239',
             type: 'tips',
-            name: 'slackShop',
+            name: 'mmcj',
             ue_name: '3239',
             isOpen: 'Y',
           }, {
             title: '3241',
             type: 'tips',
-            name: 'slackShop',
+            name: 'mmcj',
             ue_name: '3241',
             isOpen: 'Y',
           }]
@@ -455,133 +456,133 @@ export default {
           children: [{
             title: '343',
             type: 'tips',
-            name: 'filterPressShop',
+            name: 'ylcj',
             ue_name: '343',
             isOpen: 'Y',
           }, {
             title: '345',
             ue_name: '345',
             type: 'tips',
-            name: 'filterPressShop',
+            name: 'ylcj',
             isOpen: 'Y',
           }, {
             title: '601',
             ue_name: '601',
             type: 'tips',
-            name: 'filterPressShop',
+            name: 'ylcj',
             isOpen: 'Y',
           }, {
             title: '5201',
             ue_name: '5201',
             type: 'tips',
-            name: 'filterPressShop',
+            name: 'ylcj',
             isOpen: 'Y',
           }, {
             title: '6208',
             ue_name: '6208',
             type: 'tips',
-            name: 'filterPressShop',
+            name: 'ylcj',
             isOpen: 'Y',
           }, {
             title: '6210',
             ue_name: '6210',
             type: 'tips',
-            name: 'filterPressShop',
+            name: 'ylcj',
             isOpen: 'Y',
           }, {
             title: '6212',
             ue_name: '6212',
             type: 'tips',
-            name: 'filterPressShop',
+            name: 'ylcj',
             isOpen: 'Y',
           }, {
             title: '6214',
             ue_name: '6214',
             type: 'tips',
-            name: 'filterPressShop',
+            name: 'ylcj',
             isOpen: 'Y',
           }, {
             title: '6216',
             ue_name: '6216',
             type: 'tips',
-            name: 'filterPressShop',
+            name: 'ylcj',
             isOpen: 'Y',
           }, {
             title: '6218',
             ue_name: '6218',
             type: 'tips',
-            name: 'filterPressShop',
+            name: 'ylcj',
             isOpen: 'Y',
           }, {
             title: '6220',
             ue_name: '6220',
-            name: 'filterPressShop',
+            name: 'ylcj',
             type: 'tips',
             isOpen: 'Y',
           }, {
             title: '346',
             ue_name: '346',
             type: 'tips',
-            name: 'filterPressShop',
+            name: 'ylcj',
             isOpen: 'Y',
           }, {
             title: '602',
             ue_name: '602',
-            name: 'filterPressShop',
+            name: 'ylcj',
             type: 'tips',
             isOpen: 'Y',
           }, {
             title: '5201',
             ue_name: '5201',
             type: 'tips',
-            name: 'filterPressShop',
+            name: 'ylcj',
             isOpen: 'Y',
           }, {
             title: '5202',
             ue_name: '5202',
-            name: 'filterPressShop',
+            name: 'ylcj',
             type: 'tips',
             isOpen: 'Y',
           }, {
             title: '6209',
             ue_name: '6209',
             type: 'tips',
-            name: 'filterPressShop',
+            name: 'ylcj',
             isOpen: 'Y',
           }, {
             title: '6211',
             ue_name: '6211',
-            name: 'filterPressShop',
+            name: 'ylcj',
             type: 'tips',
             isOpen: 'Y',
           }, {
             title: '6213',
             ue_name: '6213',
             type: 'tips',
-            name: 'filterPressShop',
+            name: 'ylcj',
             isOpen: 'Y',
           }, {
             title: '6215',
             ue_name: '6215',
-            name: 'filterPressShop',
+            name: 'ylcj',
             type: 'tips',
             isOpen: 'Y',
           }, {
             title: '6217',
             ue_name: '6217',
             type: 'tips',
-            name: 'filterPressShop',
+            name: 'ylcj',
             isOpen: 'Y',
           }, {
             title: '6219',
             ue_name: '6219',
-            name: 'filterPressShop',
+            name: 'ylcj',
             type: 'tips',
             isOpen: 'Y',
           }, {
             title: '6220',
             ue_name: '6220',
-            name: 'filterPressShop',
+            name: 'ylcj',
             type: 'tips',
             isOpen: 'Y',
           }]
@@ -597,90 +598,90 @@ export default {
             title: '601',
             ue_name: '601',
             type: 'tips',
-            name: 'highFilterPressShop',
+            name: 'cgylcj',
             isOpen: 'Y',
           }, {
             title: '5202',
             ue_name: '5202',
-            name: 'highFilterPressShop',
+            name: 'cgylcj',
             type: 'tips',
             isOpen: 'Y',
           }, {
             title: '8521',
             ue_name: '8521',
-            name: 'highFilterPressShop',
+            name: 'cgylcj',
             type: 'tips',
             isOpen: 'Y',
           }, {
             title: '8523',
             ue_name: '8523',
-            name: 'highFilterPressShop',
+            name: 'cgylcj',
             type: 'tips',
             isOpen: 'Y',
           }, {
             title: '8525',
             ue_name: '8525',
-            name: 'highFilterPressShop',
+            name: 'cgylcj',
             type: 'tips',
             isOpen: 'Y',
           }, {
             title: '8530',
             ue_name: '8530',
-            name: 'highFilterPressShop',
+            name: 'cgylcj',
             type: 'tips',
             isOpen: 'Y',
           }, {
             title: '8532',
             ue_name: '8532',
-            name: 'highFilterPressShop',
+            name: 'cgylcj',
             type: 'tips',
             isOpen: 'Y',
           }, {
             title: '8554',
             ue_name: '8554',
-            name: 'highFilterPressShop',
+            name: 'cgylcj',
             type: 'tips',
             isOpen: 'Y',
           }, {
             title: '602',
             ue_name: '602',
-            name: 'highFilterPressShop',
+            name: 'cgylcj',
             type: 'tips',
             isOpen: 'Y',
           }, {
             title: '5210',
             ue_name: '5210',
-            name: 'highFilterPressShop',
+            name: 'cgylcj',
             type: 'tips',
             isOpen: 'Y',
           }, {
             title: '8522',
             ue_name: '8522',
-            name: 'highFilterPressShop',
+            name: 'cgylcj',
             type: 'tips',
             isOpen: 'Y',
           }, {
             title: '8524',
             ue_name: '8524',
-            name: 'highFilterPressShop',
+            name: 'cgylcj',
             type: 'tips',
             isOpen: 'Y',
           }, {
             title: '8526',
             ue_name: '8526',
-            name: 'highFilterPressShop',
+            name: 'cgylcj',
             type: 'tips',
             isOpen: 'Y',
           }, {
             title: '8531',
             ue_name: '8531',
-            name: 'highFilterPressShop',
+            name: 'cgylcj',
             type: 'tips',
             isOpen: 'Y',
           }, {
             title: '8551',
             ue_name: '8551',
-            name: 'highFilterPressShop',
+            name: 'cgylcj',
             type: 'tips',
             isOpen: 'Y',
           }]
@@ -733,7 +734,7 @@ export default {
           info = this.rightTabsList[0].children[0].children[0]
           send_info = fixedInfo(info, this.nextClose)
           this.$socket.send(send_info)
-          this.activeSlide = 0
+          this.activeSlideShop = null
       }
     },
     handleChangeTab(tab) {
@@ -790,7 +791,7 @@ export default {
       this.active = [i_inx, c_inx]
       this.nowWorkshopChildren = c.children
       this.nextClose = shop.close_sand_table_instructions
-      this.activeSlide = 0
+      this.activeSlideShop = null
     }, 500),
     // 右侧点击
     handleProductionMode: throttle(function (x, x_inx) {
@@ -798,7 +799,7 @@ export default {
         const send_info = fixedInfo(x, this.nextClose)
         console.log('>>>send_info', send_info)
         this.$socket.send(send_info)
-        this.activeSlide = x_inx
+        this.activeSlideShop = x_inx
         this.nextClose = x.close_sand_table_instructions
       }
     }, 500),
@@ -890,6 +891,7 @@ export default {
 }
 
 .equipment-switch {
+  overflow-y: scroll;
   color: rgba(255, 255, 255, 0.8);
   padding: 21px;
 

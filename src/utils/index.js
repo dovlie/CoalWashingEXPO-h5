@@ -35,6 +35,7 @@ export function fixedInfo(information , closeInstructions) {
     name: information?.name,
     alias_name: information.alias_name,
     ue_name: information.ue_name,
+    type: information.type,
     isUEAlone: information.isUEAlone,
     isOpen: information.isOpen,
     instructions: information.instructions,
