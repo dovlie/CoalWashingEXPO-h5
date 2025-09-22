@@ -109,14 +109,14 @@ export default {
         children: [{
           title: '1号',
           type: 'page',
-          name: 'ymc',
+          name: 'cqzl',
           ue_name: '原煤仓1号',
           isOpen: 'Y',
           children: []
         }, {
           title: '2号',
           type: 'page',
-          name: 'ymc',
+          name: 'cqzl',
           ue_name: '原煤仓2号',
           isOpen: 'Y',
           children: []
@@ -129,8 +129,8 @@ export default {
         children: [{
           title: '末煤车间',
           type: 'page',
-          name: 'mmcj',
-          ue_name: '末煤车间',
+          name: 'cqzl',
+          ue_name: '总览末煤车间',
           isOpen: 'Y',
           children: []
         }]
@@ -142,7 +142,7 @@ export default {
         children: [{
           title: '块煤车间',
           type: 'page',
-          name: 'ycf',
+          name: 'cqzl',
           ue_name: '块煤车间',
           isOpen: 'Y',
           children: []
@@ -155,8 +155,8 @@ export default {
         children: [{
           title: '压滤车间',
           type: 'page',
-          name: 'ylcj',
-          ue_name: '压滤车间',
+          name: 'cqzl',
+          ue_name: '总览压滤车间',
           isOpen: 'Y',
           children: []
         }]
@@ -168,28 +168,28 @@ export default {
         children: [{
           title: '1',
           type: 'page',
-          name: 'nscj',
+          name: 'cqzl',
           ue_name: '浓缩车间1',
           isOpen: 'Y',
           children: []
         }, {
           title: '2',
           type: 'page',
-          name: 'nscj',
+          name: 'cqzl',
           ue_name: '浓缩车间2',
           isOpen: 'Y',
           children: []
         }, {
           title: '3',
           type: 'page',
-          name: 'nscj',
+          name: 'cqzl',
           ue_name: '浓缩车间3',
           isOpen: 'Y',
           children: []
         }, {
           title: '4',
           type: 'page',
-          name: 'nscj',
+          name: 'cqzl',
           ue_name: '浓缩车间4',
           isOpen: 'Y',
           children: []
@@ -202,7 +202,7 @@ export default {
         children: [{
           title: '干燥车间',
           type: 'page',
-          name: 'gzcj',
+          name: 'cqzl',
           ue_name: '干燥车间',
           isOpen: 'Y',
           children: []
@@ -215,7 +215,7 @@ export default {
         children: [{
           title: '矸石仓',
           type: 'page',
-          name: 'gsc',
+          name: 'cqzl',
           ue_name: '矸石仓',
           isOpen: 'Y',
           children: []
@@ -228,8 +228,8 @@ export default {
         children: [{
           title: '超高压滤车间',
           type: 'page',
-          name: 'cgylcj',
-          ue_name: '超高压滤车间',
+          name: 'cqzl',
+          ue_name: '总览超高压滤车间',
           isOpen: 'Y',
           children: []
         }]
@@ -241,7 +241,7 @@ export default {
         children: [{
           title: '干煤泥棚',
           type: 'page',
-          name: 'gmnp',
+          name: 'cqzl',
           ue_name: '干煤泥棚',
           isOpen: 'Y',
           children: []
@@ -254,7 +254,7 @@ export default {
         children: [{
           title: '精煤干燥车间',
           type: 'page',
-          name: 'jmgzcj',
+          name: 'cqzl',
           ue_name: '精煤干燥车间',
           isOpen: 'Y',
           children: []
@@ -267,14 +267,14 @@ export default {
         children: [{
           title: '1号',
           type: 'page',
-          name: 'cpc',
+          name: 'cqzl',
           ue_name: '成品仓1',
           isOpen: 'Y',
           children: []
         }, {
           title: '2号',
           type: 'page',
-          name: 'cpc',
+          name: 'cqzl',
           ue_name: '成品仓2',
           isOpen: 'Y',
           instructions: [0, 36],
@@ -282,7 +282,7 @@ export default {
         }, {
           title: '3号',
           type: 'page',
-          name: 'cpc',
+          name: 'cqzl',
           ue_name: '成品仓3',
           isOpen: 'Y',
           children: []
@@ -294,6 +294,9 @@ export default {
         span: '100',
         children: [{
           title: '末煤车间',
+          type: 'page',
+          name: 'mmcj',
+          ue_name: '末煤车间',
           children: [{
             title: '3205',
             type: 'tips',
@@ -462,9 +465,11 @@ export default {
         parent: '车间内部',
         title: '',
         span: '100',
-        instructions: '',
         children: [{
           title: '压滤车间',
+          type: 'page',
+          name: 'ylcj',
+          ue_name: '压滤车间',
           children: [{
             title: '343',
             type: 'tips',
@@ -603,9 +608,11 @@ export default {
         parent: '车间内部',
         title: '',
         span: '100',
-        instructions: '',
         children: [{
           title: '超高压滤车间',
+          type: 'page',
+          name: 'cgylcj',
+          ue_name: '超高压滤车间',
           children: [{
             title: '601',
             ue_name: '601',
@@ -698,6 +705,16 @@ export default {
             isOpen: 'Y',
           }]
         }]
+      }, {
+        parent: '车间内部',
+        title: '',
+        span: '100',
+        children: [{
+          title: '成品仓',
+          type: 'page',
+          name: 'cpc',
+          ue_name: '成品仓',
+        }]
       }]
     }
   },
@@ -743,7 +760,7 @@ export default {
           break
         case '1':
           this.nowWorkshopChildren = this.rightTabsList[0].children[0].children
-          info = this.rightTabsList[0].children[0].children[0]
+          info = this.rightTabsList[0].children[0]
           send_info = fixedInfo(info, this.nextClose)
           this.$socket.send(send_info)
           this.activeSlideShop = null
@@ -796,7 +813,7 @@ export default {
     handleProductionWorkshop: throttle(function (c, i_inx, c_inx) {
       
       console.log('>>>send_info---c', c, c.children, i_inx, c_inx)
-      const shop = c.children[0]
+      const shop = c
       const send_info = fixedInfo(shop, this.nextClose)
       console.log('>>>send_info---send_info', send_info)
       this.$socket.send(send_info)
@@ -906,11 +923,13 @@ export default {
   overflow-y: scroll;
   color: rgba(255, 255, 255, 0.8);
   padding: 21px;
-  height: 80vh; /* 添加高度限制 */
-  /* 或者使用 max-height: 80vh; */
-}
 
-.mode {
+  .title {
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+
+  .mode {
     width: 100%;
     padding: 10px 0;
     text-align: center;
@@ -919,6 +938,7 @@ export default {
     background: rgba(255, 255, 255, 0.03);
     cursor: pointer;
   }
+}
 
 .tabs-left {
   display: flex;
@@ -931,8 +951,13 @@ export default {
 
   .equipment-switch {
     flex: 3;
-    height: 80vh; /* 添加高度限制 */
-    overflow-y: scroll; /* 确保滚动生效 */
+
+    .mode-active {
+      color: #4EDCCA;
+      border: 1px solid #4EDCCA;
+    }
+
+    .mode-noactive {}
   }
 }
 
@@ -951,6 +976,14 @@ export default {
     grid-template-columns: 1fr 1fr; /* 两列等宽 */
     gap: 8px; /* 列间距 */
     align-content: start; /* 从顶部开始排列 */
+    
+
+    .mode-active {
+      color: #4EDCCA;
+      border: 1px solid #4EDCCA;
+    }
+
+    .mode-noactive {}
   }
 }
 
