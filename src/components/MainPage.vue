@@ -906,13 +906,11 @@ export default {
   overflow-y: scroll;
   color: rgba(255, 255, 255, 0.8);
   padding: 21px;
+  height: 80vh; /* 添加高度限制 */
+  /* 或者使用 max-height: 80vh; */
+}
 
-  .title {
-    font-size: 14px;
-    margin-bottom: 8px;
-  }
-
-  .mode {
+.mode {
     width: 100%;
     padding: 10px 0;
     text-align: center;
@@ -921,7 +919,6 @@ export default {
     background: rgba(255, 255, 255, 0.03);
     cursor: pointer;
   }
-}
 
 .tabs-left {
   display: flex;
@@ -934,13 +931,8 @@ export default {
 
   .equipment-switch {
     flex: 3;
-
-    .mode-active {
-      color: #4EDCCA;
-      border: 1px solid #4EDCCA;
-    }
-
-    .mode-noactive {}
+    height: 80vh; /* 添加高度限制 */
+    overflow-y: scroll; /* 确保滚动生效 */
   }
 }
 
@@ -953,15 +945,20 @@ export default {
 
   .equipment-switch {
     flex: 5;
-    column-count: 2;
-
-    .mode-active {
-      color: #4EDCCA;
-      border: 1px solid #4EDCCA;
-    }
-
-    .mode-noactive {}
+    height: 80vh;
+    overflow-y: scroll;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 两列等宽 */
+    gap: 8px; /* 列间距 */
+    align-content: start; /* 从顶部开始排列 */
   }
+}
+
+/* 重置 mode 元素的样式 */
+.tabs-right .equipment-switch .mode {
+  width: 100%;
+  margin-right: 0;
+  margin-bottom: 8px;
 }
 
 /* 判断ipad */
